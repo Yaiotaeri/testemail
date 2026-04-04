@@ -50,8 +50,8 @@ public class WeatherService {
     }
 
 
-    @Scheduled(cron = "0 10 17,18,19,20,21,22 * * *", zone = "America/Sao_Paulo")
-    public void testeRapido() {
+    @Scheduled(fixedRate = 60000)
+    public void teste rapido() {
         WeatherDto clima = getWeather();
         enviarClimaPorEmail(clima);
 
