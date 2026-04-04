@@ -51,7 +51,7 @@ public class WeatherService {
 
 
     @Scheduled(fixedRate = 60000)
-    public void teste rapido() {
+    public void testerapido() {
         WeatherDto clima = getWeather();
         enviarClimaPorEmail(clima);
 
