@@ -49,8 +49,8 @@ public class WeatherService {
         emailService.enviarEmail("testevscode5566@gmail.com", msg);
     }
 
-    // 👇 COLOCA AQUI
-    @Scheduled(cron = "0 0 17,18,19,20,21,22 * * *") //
+
+    @Scheduled(cron = "0 10 17,18,19,20,21,22 * * *", zone = "America/Sao_Paulo")
     public void testeRapido() {
         WeatherDto clima = getWeather();
         enviarClimaPorEmail(clima);
